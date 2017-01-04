@@ -47,9 +47,6 @@ class TrieTree:
             if not node:
                 return None
             current_node = node
-        # for char in current_node.children.keys():
-        #     this_node = current_node.children.get(char)
-        #     if this_node.children:
         result = []
         self.forward(node, result)
         return result
@@ -79,11 +76,11 @@ def build_trie_test_data(filename):
     return trie
 
 if __name__ == "__main__":
-    trie = build_trie_test_data("data.csv")
+    trie = build_trie_test_data("data.tsv")
     ## whole word search
     print(trie.whole_search("禾盛新材:第四届董事会第十一次会议决议公告"))
     ## prefix search
-    results = trie.prefix_search("汇金")
+    results = trie.prefix_search("金一文化")
     if results:
         for result in results:
             print(result[0]),
