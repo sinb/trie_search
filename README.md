@@ -4,7 +4,7 @@ support whole word search and prefix search.
 
 ## example
 ```
-    trie = build_trie_test_data("data.csv")
+    trie = build_trie_test_data("data.tsv")
     ## whole word search
     print(trie.whole_search("禾盛新材:第四届董事会第十一次会议决议公告"))
     ## prefix search
